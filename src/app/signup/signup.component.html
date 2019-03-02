@@ -1,0 +1,20 @@
+
+  <form #signUpForm="ngForm" [formGroup]='messageForm' (submit)='addUsers()'>
+      <input type="text"  [(ngModel)]="name" formControlName="name" placeholder="Name" >
+      <div *ngIf='submitted && messageForm.controls.name.errors' class='error'>
+          <div *ngIf="messageForm.controls.name.errors.required">Name is required</div>
+  
+      </div>
+    
+      <input type="text"  [(ngModel)]="username" formControlName="username" placeholder="UserName" >
+      <div *ngIf='submitted && messageForm.controls.username.errors' class='error'>
+          <div *ngIf="messageForm.controls.username.errors.required">UserName is required</div>
+  
+      </div>
+      <input type="password" [(ngModel)]="password" formControlName="password" placeholder="Password">
+      <div *ngIf='submitted && messageForm.controls.password.errors' class='error'>
+          <div *ngIf="messageForm.controls.password.errors.required">Password is required</div>
+  
+      </div>
+      <input type="submit" value="Sign Up">
+    </form>

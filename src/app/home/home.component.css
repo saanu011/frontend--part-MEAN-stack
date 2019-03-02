@@ -1,0 +1,24 @@
+.container{
+    margin-top: 10px;
+    background-color: lightblue;
+    width: 100%
+  }
+  .name, .username, .del {
+    content: ' ';
+    display: inline-block;
+    padding: 5px;
+
+  }
+  .del{
+    justify-self: center;
+    border: 1px solid #f44336;
+  }
+  .del:hover, .del:active {
+    background-color:red;
+  }
+  .name{
+    align-content:left;
+  }
+  .username{
+    align-self: center;
+  }

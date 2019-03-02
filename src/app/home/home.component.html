@@ -1,0 +1,11 @@
+<div class="container">
+
+  <div *ngFor='let user of users' >
+      
+    <div class="name">{{ user.name }} </div>
+    <div class="username">{{ user.username }}</div>
+    <input type='button' (click) = 'deleteUser(user._id)' value='Delete' class='del'>
+
+  </div>
+
+</div>
